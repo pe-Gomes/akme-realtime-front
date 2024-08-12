@@ -3,6 +3,7 @@ import { CreateRoom } from './pages/create-room'
 import { Room } from './pages/room'
 import { Toaster } from 'sonner'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { ThemeProvider } from './context/theme-context'
 
 const router = createBrowserRouter([
   {
@@ -25,11 +26,11 @@ export function App() {
   })
 
   return (
-    <>
+    <ThemeProvider defaultTheme="dark">
       <QueryClientProvider client={client}>
         <Toaster invert richColors />
         <RouterProvider router={router} />
       </QueryClientProvider>
-    </>
+    </ThemeProvider>
   )
 }
