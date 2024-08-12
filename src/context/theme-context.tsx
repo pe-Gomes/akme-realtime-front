@@ -15,7 +15,9 @@ interface UseThemeContext {
   defaultTheme?: ThemeOptions
 }
 
-export const ThemeContext = createContext({} as UseThemeContext)
+export const ThemeContext = createContext<UseThemeContext | undefined>(
+  undefined
+)
 
 export function ThemeProvider({
   children,
