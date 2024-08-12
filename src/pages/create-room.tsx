@@ -45,7 +45,6 @@ export function CreateRoom() {
         </p>
 
         <form
-          {...form}
           onSubmit={form.handleSubmit(handleSubmit)}
           className="relative flex gap-2 bg-zinc-900 justify-between items-center rounded-lg p-2 border border-zinc-800 ring-orange-400 ring-offset-2 ring-offset-zinc-950 focus-within:ring-1"
         >
