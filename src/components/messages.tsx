@@ -37,6 +37,10 @@ export function Messages() {
           answered={message.answered}
         />
       ))}
+
+      {data?.messages.length === 0 && (
+        <p className="text-zinc-300 mt-4">Ainda não existem mensagens.</p>
+      )}
     </ol>
   )
 }
